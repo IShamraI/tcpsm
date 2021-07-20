@@ -14,10 +14,10 @@ def connect(host, port, sleep):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--sleep", default=5)
-    parser.add_argument("--count", default=1)
-    parser.add_argument("--host", default='127.0.0.1')
-    parser.add_argument("--port", default=3000)
+    parser.add_argument("--sleep", default=5, help="Exit after the specified amount of seconds and close all connections")
+    parser.add_argument("--count", default=1, help="Connections to keep open to the destinations")
+    parser.add_argument("--host", default='127.0.0.1', help="Target host")
+    parser.add_argument("--port", default=3000, help="Target port")
 
     args = parser.parse_args()
     sleep = int(args.sleep)
