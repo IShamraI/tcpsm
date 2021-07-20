@@ -1,6 +1,9 @@
 import time
 import socket
 
+from __future__ import print_function
+
+
 
 def connect(host, port, sleep):
     sock = socket.socket()
@@ -20,13 +23,13 @@ def main():
     count = int(args.count)
     port = int(args.port)
     host = args.host
-    print "Creating {} connections to {}:{} and wait for {}".format(count, host, port, sleep)
+    print("Creating {} connections to {}:{} and wait for {}".format(count, host, port, sleep))
     for i in range(count):
         threading.Thread(target=connect, args=(host, port, sleep,)).start()
 
-    print "All {} connections are created. Sleep for {} seconds ...".format(count, sleep)
+    print("All {} connections are created. Sleep for {} seconds ...".format(count, sleep))
     time.sleep(sleep)
-    print "Done. Bye ..."
+    print("Done. Bye ...")
 
 
 if __name__ == "__main__":
