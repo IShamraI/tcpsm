@@ -20,4 +20,8 @@ Open 10000 connections to remote server and stop in 1 minute:
 
     tcpsm.py --count 10000 --host 192.168.1.1 --port 1000 --sleep 60
 
+Open connections to remote server to ports from 1000 to 1100 and stop in 1 minute:
+
+    tcpsm.py --host 192.168.1.1 --start_port 1000 --end_port 1100 --sleep 60
+
 </details>
