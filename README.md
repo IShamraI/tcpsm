@@ -2,6 +2,8 @@
 
 `tcpsm` - tcp session manager. TCP load generator.
 
+Do you need multiple tcp connections to test your app server? - Read examples :)
+
 # Usage
 
     usage: tcpsm.py [-h] [--sleep SLEEP] [--count COUNT] [--host HOST] [--port PORT]
